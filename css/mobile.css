@@ -939,10 +939,35 @@ body.mobile-view #notification.show {
 body.mobile-view .debug-info {
     display: none;
 }
-/* 最高优先级的圆形样式 */
-html body.mobile-view .album-cover,
-html body.mobile-view .album-cover img,
-html body.mobile-view .album-cover .placeholder {
+/* 彻底修复圆形封面 */
+html body.mobile-view .mobile-turntable__platter {
+    border-radius: 50% !important;
+}
+
+html body.mobile-view .album-cover {
     border-radius: 50% !important;
     overflow: hidden !important;
+    width: 58% !important;
+    aspect-ratio: 1 / 1 !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+html body.mobile-view .album-cover img {
+    border-radius: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+html body.mobile-view .album-cover .placeholder {
+    border-radius: 50% !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
