@@ -940,11 +940,7 @@ body.mobile-view .debug-info {
     display: none;
 }
 
-/* 彻底修复圆形封面 */
-body.mobile-view .mobile-turntable__platter {
-    border-radius: 50% !important;
-}
-
+/* 终极圆形封面修复 */
 body.mobile-view .album-cover {
     border-radius: 50% !important;
     overflow: hidden !important;
@@ -954,6 +950,7 @@ body.mobile-view .album-cover {
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
+    background: transparent !important;
 }
 
 body.mobile-view .album-cover img {
@@ -962,4 +959,16 @@ body.mobile-view .album-cover img {
     height: 100% !important;
     object-fit: cover !important;
     display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    object-position: center center !important;
+}
+
+/* 强制重置所有可能的干扰样式 */
+body.mobile-view .album-cover * {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
 }
