@@ -32,13 +32,7 @@ body.mobile-view {
 body.mobile-view .background-stage {
     display: none;
 }
-/* 最高优先级的圆形样式 */
-html body.mobile-view .album-cover,
-html body.mobile-view .album-cover img,
-html body.mobile-view .album-cover .placeholder {
-    border-radius: 50% !important;
-    overflow: hidden !important;
-}
+
 @media screen and (orientation: portrait) {
     html.mobile-view,
     body.mobile-view {
@@ -944,4 +938,11 @@ body.mobile-view #notification.show {
 
 body.mobile-view .debug-info {
     display: none;
+}
+/* 最高优先级的圆形样式 */
+html body.mobile-view .album-cover,
+html body.mobile-view .album-cover img,
+html body.mobile-view .album-cover .placeholder {
+    border-radius: 50% !important;
+    overflow: hidden !important;
 }
