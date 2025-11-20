@@ -939,3 +939,27 @@ body.mobile-view #notification.show {
 body.mobile-view .debug-info {
     display: none;
 }
+
+/* 彻底修复圆形封面 */
+body.mobile-view .mobile-turntable__platter {
+    border-radius: 50% !important;
+}
+
+body.mobile-view .album-cover {
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    width: 58% !important;
+    aspect-ratio: 1 / 1 !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+body.mobile-view .album-cover img {
+    border-radius: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
