@@ -227,7 +227,7 @@ body.mobile-view .album-cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
 }
 
 body.mobile-view .album-cover .placeholder {
@@ -938,45 +938,4 @@ body.mobile-view #notification.show {
 
 body.mobile-view .debug-info {
     display: none;
-}
-/* 修复椭圆封面问题 - 确保图片完全填充圆形 */
-html body.mobile-view .album-cover {
-    border-radius: 50% !important;
-    overflow: hidden !important;
-    width: 58% !important;
-    aspect-ratio: 1 / 1 !important;
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    background: transparent !important;
-}
-
-html body.mobile-view .album-cover img {
-    border-radius: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    object-position: center !important;
-}
-
-/* 移除任何可能影响图片显示的样式 */
-html body.mobile-view .album-cover .placeholder {
-    border-radius: 50% !important;
-    width: 100% !important;
-    height: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
-    z-index: 1 !important;
-}
-
-/* 确保转盘本身是完美的圆形 */
-html body.mobile-view .mobile-turntable__platter {
-    border-radius: 50% !important;
 }
